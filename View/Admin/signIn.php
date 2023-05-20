@@ -28,6 +28,7 @@
 
         <button type="submit">Log In</button>
     </form>
+    <?php include("../E-Commerce/View/Admin/footer.php"); ?>
 </body>
 
 </html>

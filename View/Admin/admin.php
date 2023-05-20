@@ -13,7 +13,6 @@
     <?php } else { ?>
         <?php include("../E-Commerce/View/Admin/signIn.php");
     } ?>
-    <?php include("../E-Commerce/View/Admin/footer.php"); ?>
 </body>
 
 </html>
