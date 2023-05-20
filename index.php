@@ -7,7 +7,6 @@ session_start();
 define("BASE_URI", "http://localhost/E-Commerce/");
 $request = $_SERVER["REQUEST_URI"];
 $request = str_replace("E-Commerce/", "", $request);
-
 if ($request == "/admin") {
     include("../E-commerce/View/Admin/admin.php");
 } else if ($request == "/admin/signup") {
@@ -48,5 +47,10 @@ if ($request == "/admin") {
     include("../E-Commerce/Controller/Frontend/SignUp.php");
 } else if ($request == "/customer/signin") {
     include("../E-Commerce/Controller/Frontend/SignIn.php");
+}else if (stristr($request,"/productdetails")!=false) {
+    include("../E-Commerce/Controller/Frontend/ProductDetails.php");
+    include("../E-Commerce/View/frontend/productDetails.php");
+}else if ($request == "/addtocart") {
+    include("../E-Commerce/Controller/Frontend/AddToCart.php");
 }
 ?>

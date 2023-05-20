@@ -12,7 +12,7 @@ if (isset($_SESSION["aID"])) { ?>
 
     <body>
         <div class="navbar">
-            <a href="<?= BASE_URI ?>admin"><img class="logo" src="<?= BASE_URI ?>View/images/logo.png"></a>
+            <a href="<?= BASE_URI ?>admin"><img class="logo" src="<?= BASE_URI ?>View/images/logo4.png"></a>
             <ul class="list">
             <li class="items"><a href="<?= BASE_URI ?>admin">Home</a></li>
                 <li class="items"><a href="">Customer</a></li>

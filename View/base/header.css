@@ -1,7 +1,7 @@
-* {
+*{
   box-sizing: border-box;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif ;
 }
-
 .navbar {
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@
 }
 
 .items {
-  margin: 0 25px;
+  margin: 5px 25px;
 }
 .items a {
   text-decoration: none;
@@ -31,7 +31,7 @@
   color: black;
 }
 .logo {
-  height: 40px;
-  width: 40px;
-  margin: 5px 0 0 5px;
+  height: 60px;
+  width: 60px;
+  margin: 5px 0 0 15px;
 }

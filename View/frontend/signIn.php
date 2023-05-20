@@ -8,7 +8,7 @@
 
 <body>
     <div class="navbar">
-        <a href="<?= BASE_URI ?>"><img class="logo" src="<?= BASE_URI ?>View/images/logo.png"></a>
+        <a href="<?= BASE_URI ?>"><img class="logo" src="<?= BASE_URI ?>View/images/logo4.png"></a>
         <ul class="list">
             <li class="items"><a href="<?= BASE_URI ?>signup">Sign Up</a></li>
         </ul>
