@@ -12,7 +12,6 @@ else{$session=0;}?>
     <link rel="stylesheet" href="<?= BASE_URI ?>View/css/productdetails.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-
 <body>
     <div class="navbar">
         <a href="<?= BASE_URI ?>"><img class="logo" src="<?= BASE_URI ?>View/images/logo4.png"></a>
