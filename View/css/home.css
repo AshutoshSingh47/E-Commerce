@@ -3,7 +3,7 @@
   top: 50px;
   left: 0px;
   right: 0px;
-  width: 100%;
+  width: fit-content;
   height: auto;
 }
 .banner {

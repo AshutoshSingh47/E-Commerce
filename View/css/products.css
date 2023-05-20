@@ -28,13 +28,8 @@
 p {
   text-align: center;
 }
-.menus-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
 .button {
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0px 100px;
   background-color: white;
   padding: 10px;
   width: 100px;

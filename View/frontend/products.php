@@ -37,18 +37,13 @@
                 <p>
                     $<?= $item["Price"] ?>
                 </p>
-                <div class="menus-container">
                     <form method="post" action="<?= BASE_URI ?>productdetails<?= $url ?>">
                         <button class="button">View</button>
                     </form>
-                    <form method="post" action="">
-                        <button class="button">Add to Cart</button>
-                    </form>
-                </div>
             </div>
         <?php } ?>
+        <?php include("../E-Commerce/View/frontend/footer.php"); ?>
     </div>
-    <?php include("../E-Commerce/View/frontend/footer.php"); ?>
 </body>
 
 </html>

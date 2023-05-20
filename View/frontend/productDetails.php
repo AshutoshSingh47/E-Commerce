@@ -1,7 +1,10 @@
 <?php $data = $result->fetch_assoc();
-$session=0;
-if(isset($_SESSION["cID"])){$session=$_SESSION["cID"];}
-else{$session=0;}?>
+$session = 0;
+if (isset($_SESSION["cID"])) {
+    $session = $_SESSION["cID"];
+} else {
+    $session = 0;
+} ?>
 <html>
 
 <head>
@@ -10,8 +13,10 @@ else{$session=0;}?>
     </title>
     <link rel="stylesheet" href="<?= BASE_URI ?>View/base/header.css">
     <link rel="stylesheet" href="<?= BASE_URI ?>View/css/productdetails.css">
+    <link rel="stylesheet" href="<?= BASE_URI ?>View/base/footer.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
     <div class="navbar">
         <a href="<?= BASE_URI ?>"><img class="logo" src="<?= BASE_URI ?>View/images/logo4.png"></a>
@@ -58,11 +63,14 @@ else{$session=0;}?>
                     <option value="<?= $i ?>"><?= $i ?></option>
                 <?php } ?>
             </select>
-            <form action="" method="post"><button id="buy-now-button" title="Buy Now" data-id="<?=$data["pID"]?>" data-session="<?=$session?>">Buy Now</button></form>
-            <form action="" method="post"><button id="add-to-cart-button" title="Add to Cart" data-id="<?=$data["pID"]?>" data-session="<?=$session?>">Add to Cart</button></form>
+            <form action="" method="post"><button id="buy-now-button" title="Buy Now" data-id="<?= $data["pID"] ?>"
+                    data-session="<?= $session ?>">Buy Now</button></form>
+            <form action="" method="post"><button id="add-to-cart-button" title="Add to Cart"
+                    data-id="<?= $data["pID"] ?>" data-session="<?= $session ?>">Add to Cart</button></form>
         </div>
-
+        <?php include("../E-Commerce/View/frontend/footer.php"); ?>
     </div>
+
     <script src="../E-Commerce/View/js/add-to-cart.js"></script>
     <script src="../E-Commerce/View/js/buy-now.js"></script>
 
