@@ -58,12 +58,14 @@ else{$session=0;}?>
                     <option value="<?= $i ?>"><?= $i ?></option>
                 <?php } ?>
             </select>
-            <form action="" method="post"><button id="buy-now-button" title="Buy Now">Buy Now</button></form>
+            <form action="" method="post"><button id="buy-now-button" title="Buy Now" data-id="<?=$data["pID"]?>" data-session="<?=$session?>">Buy Now</button></form>
             <form action="" method="post"><button id="add-to-cart-button" title="Add to Cart" data-id="<?=$data["pID"]?>" data-session="<?=$session?>">Add to Cart</button></form>
         </div>
 
     </div>
     <script src="../E-Commerce/View/js/add-to-cart.js"></script>
+    <script src="../E-Commerce/View/js/buy-now.js"></script>
+
 </body>
 
 </html>
