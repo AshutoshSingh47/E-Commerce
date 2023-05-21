@@ -23,7 +23,32 @@
         </div>
         <div id="cart-container">
             <div id="cart-table">
-
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        while ($data = $result->fetch_assoc()) {
+                            $pID[$rows] = $data["pID"];
+                            $sql = "SELECT ProductImage, ProductName, Price FROM adminproducts WHERE pID='$pID[$rows]'";
+                            $result2 = $conn->query($sql);?>
+                            <?php while($data2 = $result2->fetch_assoc()){ ?>
+                            <tr>
+                                <td><img src="<?=BASE_URI?>View/images/<?=$data2["ProductImage"]?>"></img><span><?=$data2["ProductName"]?></span></td>
+                                <td><?=$data2["Price"]?></td>
+                                <td><?=$data["Quantity"]?></td>
+                                <td><?=$data["TotalPrice"]?></td>
+                            </tr>
+                            <?php }$rows--;?>
+                       <?php } ?>
+                    </tbody>
+                </table>
             </div>
             <div id="cart-total">
 

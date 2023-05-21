@@ -22,3 +22,10 @@
     height: 500px;
     border: solid 1px;
 }
+table{
+margin: auto auto;
+}
+img{
+    height: 50px;
+    width: 50px;
+}
