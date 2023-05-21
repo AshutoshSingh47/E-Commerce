@@ -42,6 +42,7 @@ if ($request == "/admin") {
 } else if ($request == "/blogs") {
     include("../E-Commerce/View/frontend/blogs.php");
 } else if ($request == "/cart") {
+    include("../E-Commerce/Controller/Frontend/Cart.php");
     include("../E-Commerce/View/frontend/cart.php");
 } else if ($request == "/customer/signup") {
     include("../E-Commerce/Controller/Frontend/SignUp.php");

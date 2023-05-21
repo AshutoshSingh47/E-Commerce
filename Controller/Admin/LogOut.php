@@ -1,4 +1,4 @@
 <?php
-session_destroy();
+unset($_SESSION['aID']);
 header("Location: http://localhost/E-Commerce/admin");
 ?>
