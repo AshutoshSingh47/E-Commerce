@@ -24,6 +24,7 @@ function getValue(productid,customerid,quantity) {
       success: function (data) {
         $("#update-cart").on("click",function(){
             location.reload();
+            $("html, body").animate({ scrollTop: 0 }, 1000);
             alert(data);
         })
       },
