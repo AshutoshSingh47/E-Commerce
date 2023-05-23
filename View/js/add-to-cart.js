@@ -4,7 +4,7 @@ $(document).ready(function () {
       e.preventDefault();
       let productid = $(this).attr("data-id");
       let customerid = $(this).attr("data-session");
-      console.log(customerid);
+      
       let quantity = $("#quantity").val();
       getValue(productid,customerid,quantity);
     } else {

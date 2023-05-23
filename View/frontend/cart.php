@@ -1,6 +1,6 @@
 <?php if (!isset($_SESSION["cID"])) {
     header("Location: http://localhost/E-Commerce/signin") ?>
-<?php } else { ?>
+<?php } else { $customerid=$_SESSION["cID"];?>
     <html>
 
     <head>
@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="<?= BASE_URI ?>View/base/header.css">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/css/cart.css">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/base/footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
     </head>
@@ -50,15 +51,15 @@
                                         $<?= $data2["Price"] ?>.00
                                     </td>
                                     <td id="product-quantity">
-                                        <select name="quantity" id="quantity" placeholder="3">
-                                        <option value=""><?= $data["Quantity"] ?></option>
-                                        <?php for ($i = 1; $i <= $data2["Quantity"]; $i++) { ?>
+                                        <select name="quantity" class="quantity" data-productid="<?=$data["pID"]?>" data-customerid="<?=$customerid?>">
+                                        <option value="<?= $data["Quantity"] ?>"><?= $data["Quantity"] ?></option>
+                                        <?php for ($i = 1; $i <= $data2["Quantity"]; $i++) { ?>   
                                             <option value="<?= $i ?>"><?= $i ?></option>
                                         <?php } ?>
                                         </select>
                                     </td>
-                                    <td id="product-total-price">$
-                                        <?= $data["TotalPrice"] ?>.00
+                                    <td id="product-total-price">
+                                        $<?= $data["TotalPrice"] ?>.00
                                     </td>
                                 </tr>
                             <?php }
@@ -66,13 +67,13 @@
                         <?php } ?>
                     </tbody>
                 </table>
+                <button id="update-cart">Update Cart</button>
             </div>
             <div id="cart-total">
-
             </div>
             <?php include("../E-Commerce/View/frontend/footer.php"); ?>
         </div>
-
+        <script src="../E-Commerce/View/js/cart.js"></script>
     </body>
 
     </html>
