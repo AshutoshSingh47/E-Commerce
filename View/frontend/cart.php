@@ -34,9 +34,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
+                        <?php $orderTotal=0;
                         while ($data = $result->fetch_assoc()) {
                             $pID[$rows] = $data["pID"];
+                            $orderTotal+=$data["TotalPrice"];
                             $sql = "SELECT ProductImage, ProductName, Price, Quantity FROM adminproducts WHERE pID='$pID[$rows]'";
                             $result2 = $conn->query($sql); ?>
                             <?php while ($data2 = $result2->fetch_assoc()) { ?>
@@ -70,6 +71,7 @@
                 <button id="update-cart">Update Cart</button>
             </div>
             <div id="cart-total">
+                <?=$orderTotal?>
             </div>
             <?php include("../E-Commerce/View/frontend/footer.php"); ?>
         </div>
