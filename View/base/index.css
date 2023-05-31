@@ -61,3 +61,15 @@ button:hover {
   cursor: pointer;
   background-color: #42d842;
 }
+#forgot-password{
+  margin: -10px 0 0 0;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  color: gray;
+}
+a:hover{
+  text-decoration: underline;
+}

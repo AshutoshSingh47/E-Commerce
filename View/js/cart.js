@@ -13,6 +13,7 @@ $(document).ready(function(){
 });
 
 function getValue(productid,customerid,quantity) {
+  let count=1;
     $.ajax({
       url: "http://localhost/E-Commerce/addtocart",
       type: "POST",
@@ -23,10 +24,15 @@ function getValue(productid,customerid,quantity) {
       },
       success: function (data) {
         $("#update-cart").on("click",function(){
-            location.reload();
-            $("html, body").animate({ scrollTop: 0 }, 1000);
+          location.reload();
+          if(count==1){
             alert(data);
-        })
+            exit();
+          }
+      })
       },
     });
   }
+
+
+  

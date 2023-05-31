@@ -4,6 +4,7 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="<?= BASE_URI ?>View/base/header.css">
     <link rel="stylesheet" href="<?= BASE_URI ?>View/base/index.css">
+    <link rel="stylesheet" href="<?= BASE_URI ?>View/base/footer.css">
 </head>
 
 <body>
@@ -27,6 +28,8 @@
 
         <button type="submit">Log In</button>
     </form>
+    <div id="forgot-password"><a id="forgot-password" href="" >Forgot Password ?</a></div>
+    <?php include("../E-Commerce/View/Admin/footer.php"); ?>
 </body>
 
 </html>

@@ -70,9 +70,9 @@
                 </table>
                 <button id="update-cart">Update Cart</button>
             </div>
-            <div id="cart-total">
+            <!-- <div id="cart-total">
                 <?=$orderTotal?>
-            </div>
+            </div> -->
             <?php include("../E-Commerce/View/frontend/footer.php"); ?>
         </div>
         <script src="../E-Commerce/View/js/cart.js"></script>

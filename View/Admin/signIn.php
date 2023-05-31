@@ -28,6 +28,7 @@
 
         <button type="submit">Log In</button>
     </form>
+    <div id="forgot-password"><a id="forgot-password" href="" >Forgot Password ?</a></div>
     <?php include("../E-Commerce/View/Admin/footer.php"); ?>
 </body>
 

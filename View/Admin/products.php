@@ -49,7 +49,7 @@ if (isset($_SESSION["aID"])) { ?>
             </div>
             <button type="submit">Add Product</button>
         </form>
-        <?php include("../E-Commerce/View/Admin/footer.php");?>
+        
     </body>
 
     </html>

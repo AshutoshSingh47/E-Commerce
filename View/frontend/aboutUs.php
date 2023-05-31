@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <?php include("../E-Commerce/View/frontend/siteProgress.php"); ?>
     <?php include("../E-Commerce/View/frontend/footer.php"); ?>
 </body>
 
