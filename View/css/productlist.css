@@ -38,7 +38,7 @@ th {
   font-size: small;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-td {
+.cell {
   padding: 5px 0 5px 20px;
   border: solid 1px;
   text-align: left;
@@ -50,4 +50,25 @@ tr:nth-child(even) {
 .productImage {
   height: 50px;
   width: 50px;
+}
+#delete-button{
+  margin: 10px 0px 0;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d7543a;
+  color: #fff;
+}
+#edit-button{
+  margin: 10px 0px 0;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1979c3;
+  color: #fff;
+}
+.cell2 {
+background-color: #fff;
 }

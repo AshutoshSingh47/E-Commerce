@@ -70,9 +70,21 @@
                 </table>
                 <button id="update-cart">Update Cart</button>
             </div>
-            <!-- <div id="cart-total">
-                <?=$orderTotal?>
-            </div> -->
+            <div id="cart-total">
+            <span id="cart-total-heading">Summary</span>
+            <hr>
+                <div id="sub-total">
+                    <span>Subtotal</span>
+                    <span id="">$<?=$orderTotal?>.00</span>
+                </div>
+                <hr>
+                <div id="order-total">
+                    <span id="order-total-title">Order Total</span>
+                    <span id="order-total-value">$<?=$orderTotal?>.00</span>
+                </div>
+                <button id="proceed-to-checkout-button" title="Proceed To Checkout">Proceed to Checkout</button>
+            </div>
+            
             <?php include("../E-Commerce/View/frontend/footer.php"); ?>
         </div>
         <script src="../E-Commerce/View/js/cart.js"></script>
