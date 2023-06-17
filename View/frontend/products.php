@@ -42,7 +42,7 @@
                     </form>
             </div>
         <?php } ?>
-        <?php include("../E-Commerce/View/frontend/footer.php"); ?>
+        <?php include("../FitNationX/View/frontend/footer.php"); ?>
     </div>
 </body>
 

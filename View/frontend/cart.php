@@ -1,5 +1,5 @@
 <?php if (!isset($_SESSION["cID"])) {
-    header("Location: http://localhost/E-Commerce/signin") ?>
+    header("Location: http://localhost/fitnationx/signin") ?>
 <?php } else { $customerid=$_SESSION["cID"];?>
     <html>
 
@@ -85,9 +85,9 @@
                 <button id="proceed-to-checkout-button" title="Proceed To Checkout">Proceed to Checkout</button>
             </div>
             
-            <?php include("../E-Commerce/View/frontend/footer.php"); ?>
+            <?php include("../FitNationX/View/frontend/footer.php"); ?>
         </div>
-        <script src="../E-Commerce/View/js/cart.js"></script>
+        <script src="../FitNationX/View/js/cart.js"></script>
     </body>
 
     </html>

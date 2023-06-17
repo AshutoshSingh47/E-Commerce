@@ -15,7 +15,7 @@ $sql = "INSERT INTO customer(FirstName, LastName, PhoneNo, Email, Password)
 VALUES('$fname','$lname','$phoneno','$email','$password')";
 
 if ($conn->query($sql)) {
-    header("Location: http://localhost/E-Commerce/signin");
+    header("Location: http://localhost/fitnationx/signin");
 } else {
     echo "Not Registered" . $conn->error;
 }

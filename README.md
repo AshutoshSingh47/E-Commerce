@@ -1,5 +1,5 @@
-# E-Commerce
-It's a final year college project based on E-Commerce 
+# FitNationX
+It's a final year college project based on FitNationX 
 
 Before cloning this repository make sure you have the following configurations in your system.
 

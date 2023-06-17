@@ -68,11 +68,11 @@ if (isset($_SESSION["cID"])) {
             <form action="" method="post"><button id="add-to-cart-button" title="Add to Cart"
                     data-id="<?= $data["pID"] ?>" data-session="<?= $session ?>">Add to Cart</button></form>
         </div>
-        <?php include("../E-Commerce/View/frontend/footer.php"); ?>
+        <?php include("../FitNationX/View/frontend/footer.php"); ?>
     </div>
 
-    <script src="../E-Commerce/View/js/add-to-cart.js"></script>
-    <script src="../E-Commerce/View/js/buy-now.js"></script>
+    <script src="../FitNationX/View/js/add-to-cart.js"></script>
+    <script src="../FitNationX/View/js/buy-now.js"></script>
 
 </body>
 

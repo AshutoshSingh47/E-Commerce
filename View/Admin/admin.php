@@ -9,9 +9,9 @@
 
 <body>
     <?php if (isset($_SESSION["aID"])) {
-        include("../E-Commerce/View/Admin/header.php"); ?>
+        include("../FitNationX/View/Admin/header.php"); ?>
     <?php } else { ?>
-        <?php include("../E-Commerce/View/Admin/signIn.php");
+        <?php include("../FitNationX/View/Admin/signIn.php");
     } ?>
 </body>
 

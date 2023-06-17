@@ -16,7 +16,7 @@ $(document).ready(function () {
 function getValue(productid, customerid, quantity) {
   let count = 1;
   $.ajax({
-    url: "http://localhost/E-Commerce/addtocart",
+    url: "http://localhost/fitnationx/addtocart",
     type: "POST",
     data: {
       productid: productid,

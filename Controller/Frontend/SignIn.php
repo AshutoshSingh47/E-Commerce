@@ -12,7 +12,7 @@ $result = $conn->query($sql);
 $values = $result->fetch_assoc();
 if ($result->num_rows >= 1) {
     $_SESSION["cID"] = $values["cID"];
-    header("Location: http://localhost/E-Commerce/");
+    header("Location: http://localhost/fitnationx/");
 } else {
     echo "Not Registered" . $conn->error;
 }

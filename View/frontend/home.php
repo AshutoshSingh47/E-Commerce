@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include("../E-Commerce/View/frontend/header.php"); ?>
+    <?php include("../FitNationX/View/frontend/header.php"); ?>
     <div class="container">
         <div class="banner">
             " A year from now you may wish
@@ -22,22 +22,22 @@
         </h1>
         <div class="description">
             <div class="description-box"><img class="description-image"
-                    src="../E-Commerce/View/images/membership.jpg">Membership across Country</div>
+                    src="../FitNationX/View/images/membership.jpg">Membership across Country</div>
             <div class="description-box"><img class="description-image"
-                    src="../E-Commerce/View/images/products.jpg">Fitness
+                    src="../FitNationX/View/images/products.jpg">Fitness
                 Products</div>
             <div class="description-box"><img class="description-image"
-                    src="../E-Commerce/View/images/location.jpg">Nearest
+                    src="../FitNationX/View/images/location.jpg">Nearest
                 Gym Near You</div>
             <div class="description-box"><img class="description-image"
-                    src="../E-Commerce/View/images/trainer.jpg">Personal Fitness Trainer</div>
-            <div class="description-box"><img class="description-image" src="../E-Commerce/View/images/group.jpg">Group
+                    src="../FitNationX/View/images/trainer.jpg">Personal Fitness Trainer</div>
+            <div class="description-box"><img class="description-image" src="../FitNationX/View/images/group.jpg">Group
                 Programs</div>
         </div>
         <div class="feature">
             Join today and get exciting offers
         </div>
-        <?php include("../E-Commerce/View/frontend/footer.php"); ?>
+        <?php include("../FitNationX/View/frontend/footer.php"); ?>
     </div>
 </body>
 

@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION["cID"])) {
-    header("Location: http://localhost/E-Commerce/"); ?>
+    header("Location: http://localhost/fitnationx/"); ?>
 <?php } else { ?>
     <html>
 

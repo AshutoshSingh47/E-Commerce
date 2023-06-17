@@ -1,42 +1,20 @@
 <?php
-namespace Model\Admin;
+namespace Model;
 
 class Db
 {
-    private static $instance = NULL;
-    private $data=4;
-    // public static function DbConnection()
-    // {
+    private static $conn;
 
-    // }
-    public function __construct()
+    function getConnection()
     {
-        echo "Connect";
-    }
-    public function __get($prop)
-    {
-        return $this->data;
-    }
-    public function __set($property,$value)
-    {
-        $this->data=$value;
-    }
-    public static function Singleton()
-    {
-        if(isset(self::$instance)){
-            echo "Already connected";
-            
+        if(Db::$conn == null){
+            Db::$conn = new \mysqli("localhost", "root", "", "gym_admin");
+            if (Db::$conn->connect_error) {
+                die("connection failed" . Db::$conn->connect_error);
+            }
         }
-        else{
-            self::$instance = new Db();
-        }
-        return self::$instance;
+        return Db::$conn;
     }
 }
 
-$obj=Db::Singleton();
-print_r( $obj);
-// echo $obj->prop;
-$obj->property=10;
-echo $obj->property;
 ?>

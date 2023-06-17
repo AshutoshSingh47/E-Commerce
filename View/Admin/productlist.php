@@ -71,5 +71,5 @@ if (isset($_SESSION["aID"])) { ?>
 
     </html>
 <?php } else {
-    header("Location: http://localhost/E-Commerce/admin/signin");
+    header("Location: http://localhost/fitnationx/admin/signin");
 } ?>

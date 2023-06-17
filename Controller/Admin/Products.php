@@ -15,10 +15,10 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO adminproducts(aID,ProductName, ProductSKU, ProductDescription, Price, Quantity, ProductImage)
 VALUES('$aID','$pname','$psku','$pdescription','$price','$quantity','$pimage')";
 
-$path = "../E-Commerce/View/images/" . $pimage;
+$path = "../FitNationX/View/images/" . $pimage;
 if ($conn->query($sql) === TRUE) {
     move_uploaded_file($tmp, $path);
-    header("Location: http://localhost/E-Commerce/admin/products");
+    header("Location: http://localhost/fitnationx/admin/products");
 } else {
     echo ("Not created table");
 }

@@ -8,14 +8,14 @@ $(document).ready(function () {
       let quantity = $("#quantity").val();
       getValue(productid,customerid,quantity);
     } else {
-      $(this).parent().attr("action", "http://localhost/E-Commerce/signin");
+      $(this).parent().attr("action", "http://localhost/fitnationx/signin");
     }
   });
 });
 
 function getValue(productid,customerid,quantity) {
   $.ajax({
-    url: "http://localhost/E-Commerce/addtocart",
+    url: "http://localhost/fitnationx/addtocart",
     type: "POST",
     data: {
       productid: productid,

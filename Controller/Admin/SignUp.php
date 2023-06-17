@@ -20,7 +20,7 @@ if($result->num_rows>=1){
 $sql = "INSERT INTO admin(FirstName ,LastName ,Email ,Password,PhoneNo,GymName ,Address)
 VALUES('$fname','$lname','$email','$password','$phoneno','$gymname','$address')";
 if ($conn->query($sql) === TRUE) {
-    header("Location: http://localhost/E-Commerce/admin/signin");
+    header("Location: http://localhost/fitnationx/admin/signin");
 } else {
     echo "Not Registered Successfully";
 }
