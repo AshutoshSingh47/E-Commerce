@@ -8,6 +8,7 @@ if (isset($_SESSION["aID"])) { ?>
         <link rel="stylesheet" href="<?= BASE_URI ?>View/base/header.css">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/css/productlist.css">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/base/footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
 
     <body>
@@ -21,7 +22,8 @@ if (isset($_SESSION["aID"])) { ?>
             </ul>
         </div>
         <h1>Product Listing</h1>
-        <form action="<?= BASE_URI ?>admin/addproduct" method="post"><button type="submit">Add Product</button></form>
+        <form action="<?= BASE_URI ?>admin/addproduct" method="post"><button id="add-product" type="submit">Add
+                Product</button></form>
 
         <table class="productListing">
             <thead>
@@ -37,7 +39,8 @@ if (isset($_SESSION["aID"])) { ?>
             <tbody>
                 <?php while ($item = $result->fetch_assoc()) { ?>
                     <tr>
-                        <td class="cell"><img class="productImage" src="<?= BASE_URI ?>View/images/<?= $item["ProductImage"] ?>"></img></td>
+                        <td class="cell"><img class="productImage"
+                                src="<?= BASE_URI ?>View/images/<?= $item["ProductImage"] ?>"></img></td>
                         <td class="cell">
                             <?= $item["ProductName"] ?>
                         </td>
@@ -54,19 +57,16 @@ if (isset($_SESSION["aID"])) { ?>
                             <?= $item["Quantity"] ?>
                         </td>
                         <td class="cell2">
-                            <form action="" method="post">
-                                <button id="delete-button" type="submit">Delete</button>
-                            </form>
+                            <button class="delete-button" type="submit" data-productid="<?= $item["pID"] ?>">Delete</button>
                         </td>
                         <td class="cell2">
-                        <form action="" method="post">
-                                <button id="edit-button" type="submit">Edit</button>
-                            </form>
+                            <button class="edit-button" type="submit" data-productid="<?= $item["pID"] ?>">Edit</button>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
+        <script src="../../FitNationX/View/js/admin-delete-product.js"></script>
     </body>
 
     </html>

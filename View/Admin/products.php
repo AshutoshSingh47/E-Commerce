@@ -20,7 +20,7 @@ if (isset($_SESSION["aID"])) { ?>
                 <li class="items"><a href="<?= BASE_URI ?>admin/logout">Log Out</a></li>
             </ul>
         </div>
-        <h1>Product Listing</h1>
+        <h1>Add Product</h1>
         <form name="product_registration" method="post" action="<?= BASE_URI ?>admin/adminproducts" id="product_registration" enctype="multipart/form-data">
             <div class="row">
                 <label for="pname">Product Name :</label>

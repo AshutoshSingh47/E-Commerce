@@ -9,8 +9,6 @@
         <link rel="stylesheet" href="<?= BASE_URI ?>View/css/cart.css">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/base/footer.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
     </head>
 
     <body>

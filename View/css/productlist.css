@@ -11,7 +11,7 @@ form {
   flex-direction: row;
   justify-content: end;
 }
-button {
+#add-product {
   margin: -10px 20px 0;
   width: 100px;
   height: 40px;
@@ -20,7 +20,7 @@ button {
   background-color: #5cb85c;
   color: #fff;
 }
-button:hover {
+#add-product {
   cursor: pointer;
   background-color: #42d842;
 }
@@ -51,7 +51,7 @@ tr:nth-child(even) {
   height: 50px;
   width: 50px;
 }
-#delete-button{
+.delete-button{
   margin: 10px 0px 0;
   width: 100px;
   height: 40px;
@@ -59,8 +59,9 @@ tr:nth-child(even) {
   border-radius: 5px;
   background-color: #d7543a;
   color: #fff;
+  cursor: pointer;
 }
-#edit-button{
+.edit-button{
   margin: 10px 0px 0;
   width: 100px;
   height: 40px;
@@ -68,6 +69,7 @@ tr:nth-child(even) {
   border-radius: 5px;
   background-color: #1979c3;
   color: #fff;
+  cursor: pointer;
 }
 .cell2 {
 background-color: #fff;

@@ -2,11 +2,6 @@
 
 $email = $_POST["email"];
 $password = $_POST["password"];
-$conn = new mysqli("localhost", "root", "", "gym_admin");
-
-if ($conn->connect_error) {
-    die("connection failed" . $conn->connect_error);
-}
 
 $sql = "SELECT aID, Email, Password FROM admin WHERE Email='$email' AND Password='$password'";
 $result=$conn->query($sql);

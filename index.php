@@ -8,6 +8,7 @@ session_start();
 include("autoloader.php");
 
 $conn=new Db();
+$conn=$conn->getConnection();
 
 define("BASE_URI", "http://localhost/fitnationx/");
 $request = $_SERVER["REQUEST_URI"];
@@ -58,5 +59,7 @@ if ($request == "/admin") {
     include("../fitnationx/View/frontend/productDetails.php");
 }else if ($request == "/addtocart") {
     include("../fitnationx/Controller/Frontend/AddToCart.php");
+}else if ($request == "/admindeleteproduct") {
+    include("../fitnationx/Controller/Admin/DeleteProduct.php");
 }
 ?>

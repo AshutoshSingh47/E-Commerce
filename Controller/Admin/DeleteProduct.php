@@ -1,14 +1,14 @@
 <?php
-namespace Controller\Admin;
-use Model\Db;
-
-include("../../../fitnationx/autoloader.php");
-
-$conn=new Db();
-
-$conn=$conn->getConnection();
+$pID=$_POST["productid"];
 
 
-// $sql="SELECT *FROM gym_admin";
+$sql="DELETE FROM adminproducts WHERE pID=$pID";
+
+
+if($conn->query($sql) === TRUE){
+    echo "Product is deleted successfully";
+}else{
+    echo "Product is not deleted successfully";
+}
 
 ?>
