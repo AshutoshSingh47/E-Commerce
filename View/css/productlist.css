@@ -47,30 +47,35 @@ th {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+tr:hover {
+  background-color: #eee;
+}
 .productImage {
   height: 50px;
   width: 50px;
 }
 .delete-button{
-  margin: 10px 0px 0;
-  width: 100px;
+  margin: 0px 0px 0px 10px;
+  width: 60px;
   height: 40px;
   border: none;
   border-radius: 5px;
   background-color: #d7543a;
   color: #fff;
   cursor: pointer;
+  float: left;
 }
 .edit-button{
-  margin: 10px 0px 0;
-  width: 100px;
+  margin: 0px 0px 0 25px;
+  width: 60px;
   height: 40px;
   border: none;
   border-radius: 5px;
   background-color: #1979c3;
   color: #fff;
   cursor: pointer;
+  float: left;
 }
 .cell2 {
-background-color: #fff;
+  width: 160px;
 }

@@ -34,6 +34,7 @@ if (isset($_SESSION["aID"])) { ?>
                     <th>Product Description</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,8 +59,6 @@ if (isset($_SESSION["aID"])) { ?>
                         </td>
                         <td class="cell2">
                             <button class="delete-button" type="submit" data-productid="<?= $item["pID"] ?>">Delete</button>
-                        </td>
-                        <td class="cell2">
                             <button class="edit-button" type="submit" data-productid="<?= $item["pID"] ?>">Edit</button>
                         </td>
                     </tr>
