@@ -14,7 +14,7 @@ Linux -> php8.1/8.2, apache2
 
 
 
-![Screenshot 2023-06-19 015531](https://github.com/AshutoshSingh47/E-Commerce/assets/67503435/5afca177-8d41-4b3d-b73c-965b12398933)
+![Screenshot 2023-06-20 221843](https://github.com/AshutoshSingh47/E-Commerce/assets/67503435/f60b1203-0d5a-487c-8128-1ec143b40ee1)
 
 
 
