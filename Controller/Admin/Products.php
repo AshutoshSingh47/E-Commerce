@@ -8,10 +8,7 @@ $quantity = $_POST["quantity"];
 $pimage = $_FILES['image']['name'];
 $tmp = $_FILES['image']['tmp_name'];
 $aID = $_SESSION["aID"];
-$conn = new mysqli("localhost", "root", "", "gym_admin");
-if ($conn->connect_error) {
-    die("connection failed" . $conn->connect_error);
-}
+
 $sql = "INSERT INTO adminproducts(aID,ProductName, ProductSKU, ProductDescription, Price, Quantity, ProductImage)
 VALUES('$aID','$pname','$psku','$pdescription','$price','$quantity','$pimage')";
 

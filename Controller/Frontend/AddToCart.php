@@ -3,11 +3,6 @@ $pID = $_POST['productid'];
 $cID = $_POST['customerid'];
 $quantity = $_POST['quantity'];
 
-$conn = new mysqli("localhost", "root", "", "gym_admin");
-if ($conn->connect_error) {
-    die("connection failed" . $conn->connect_error);
-}
-
 $sql = "SELECT Price FROM adminproducts WHERE pID=$pID";
 $result = $conn->query($sql);
 $data = $result->fetch_assoc();

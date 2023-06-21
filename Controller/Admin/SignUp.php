@@ -6,11 +6,7 @@ $password = $_POST["password"];
 $phoneno = $_POST["phoneno"];
 $gymname = $_POST["gymname"];
 $address = $_POST["address"];
-$conn = new mysqli("localhost", "root", "", "gym_admin");
 
-if ($conn->connect_error) {
-    die("connection failed" . $conn->connect_error);
-}
 $sql="SELECT Email FROM admin WHERE Email='$email'";
 $result=$conn->query($sql);
 if($result->num_rows>=1){
