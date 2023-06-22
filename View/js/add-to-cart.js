@@ -4,23 +4,23 @@ $(document).ready(function () {
       e.preventDefault();
       let productid = $(this).attr("data-id");
       let customerid = $(this).attr("data-session");
-      
+
       let quantity = $("#quantity").val();
-      getValue(productid,customerid,quantity);
+      getValue(productid, customerid, quantity);
     } else {
       $(this).parent().attr("action", "http://localhost/fitnationx/signin");
     }
   });
 });
 
-function getValue(productid,customerid,quantity) {
+function getValue(productid, customerid, quantity) {
   $.ajax({
     url: "http://localhost/fitnationx/addtocart",
     type: "POST",
     data: {
       productid: productid,
       customerid: customerid,
-      quantity:quantity
+      quantity: quantity,
     },
     success: function (data) {
       alert(data);

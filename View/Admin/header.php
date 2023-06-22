@@ -5,6 +5,6 @@
         <li class="items"><a href="">Customer</a></li>
         <li class="items"><a href="<?= BASE_URI ?>admin/products">Products</a></li>
         <li class="items"><a href="">Sales</a></li>
-        <li class="items"><a href="<?= BASE_URI ?>admin/logout">Log Out</a></li>
+        <li class="items"><a href="<?= BASE_URI ?>admin/logout">Log out</a></li>
     </ul>
 </div>

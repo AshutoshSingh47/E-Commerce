@@ -61,5 +61,7 @@ if ($request == "/admin") {
     include("../fitnationx/Controller/Frontend/AddToCart.php");
 }else if ($request == "/admindeleteproduct") {
     include("../fitnationx/Controller/Admin/DeleteProduct.php");
+}else if ($request == "/admineditproduct") {
+    include("../fitnationx/Controller/Admin/EditProduct.php");
 }
 ?>

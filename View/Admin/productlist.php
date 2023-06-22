@@ -58,8 +58,8 @@ if (isset($_SESSION["aID"])) { ?>
                             <?= $item["Quantity"] ?>
                         </td>
                         <td class="cell2">
-                            <button class="delete-button" type="submit" data-productid="<?= $item["pID"] ?>">Delete</button>
-                            <button class="edit-button" type="submit" data-productid="<?= $item["pID"] ?>">Edit</button>
+                            <button id="delete-button" type="submit" data-productid="<?= $item["pID"] ?>">Delete</button>
+                            <button id="edit-button" type="submit" data-productid="<?= $item["pID"] ?>">Edit</button>
                         </td>
                     </tr>
                 <?php } ?>
