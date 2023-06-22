@@ -1,5 +1,6 @@
 <?php
 use Model\Db;
+
 ini_set("disply_errors", 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -7,8 +8,8 @@ session_start();
 
 include("autoloader.php");
 
-$conn=new Db();
-$conn=$conn->getConnection();
+$conn = new Db();
+$conn = $conn->getConnection();
 
 define("BASE_URI", "http://localhost/fitnationx/");
 $request = $_SERVER["REQUEST_URI"];
@@ -54,14 +55,17 @@ if ($request == "/admin") {
     include("../fitnationx/Controller/Frontend/SignUp.php");
 } else if ($request == "/customer/signin") {
     include("../fitnationx/Controller/Frontend/SignIn.php");
-}else if (stristr($request,"/productdetails")!=false) {
+} else if (stristr($request, "/productdetails") != false) {
     include("../fitnationx/Controller/Frontend/ProductDetails.php");
     include("../fitnationx/View/frontend/productDetails.php");
-}else if ($request == "/addtocart") {
+} else if ($request == "/addtocart") {
     include("../fitnationx/Controller/Frontend/AddToCart.php");
-}else if ($request == "/admindeleteproduct") {
+} else if ($request == "/admindeleteproduct") {
     include("../fitnationx/Controller/Admin/DeleteProduct.php");
-}else if ($request == "/admineditproduct") {
+} else if (stristr($request, "/editproduct") != false) {
+    include("../fitnationx/Controller/Admin/PlaceholderProduct.php");
+    include("../fitnationx/View/Admin/editproduct.php");
+} else if ($request == "/adminupdateproduct") {
     include("../fitnationx/Controller/Admin/EditProduct.php");
 }
 ?>

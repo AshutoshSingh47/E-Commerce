@@ -1,17 +1,20 @@
 $(document).ready(function () {
-  $("#delete-button").on("click", function (e) {
+  $(".delete-button").on("click", function (e) {
     e.preventDefault();
     let productid = $(this).attr("data-productid");
-    getValue(productid);
+    deleteProduct(productid);
   });
 
-  $("#edit-button").on("click", function (e) {
+  $(".edit-button").on("click", function (e) {
     let productid = $(this).attr("data-productid");
-    window.location='';
+    window.location =
+      "http://localhost/fitnationx/admin/editproduct" +
+      "?productid=" +
+      productid;
   });
 });
 
-function getValue(productid) {
+function deleteProduct(productid) {
   $.ajax({
     url: "http://localhost/fitnationx/admindeleteproduct",
     type: "POST",

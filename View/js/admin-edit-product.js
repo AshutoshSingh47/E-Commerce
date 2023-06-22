@@ -1,26 +1,34 @@
-// $(document).ready(function () {
-//   $("#edit-button").on("click", function (e) {
-//     e.preventDefault();
-//     let productid = $(this).attr("data-productid");
-//     getValue(productid);
-//   });
-// });
-
-// function getValue(productid) {
-//   $.ajax({
-//     url: "http://localhost/fitnationx/admineditproduct",
-//     type: "POST",
-//     data: { productid: productid },
-//     success: function (data) {
-//       location.reload();
-//       alert(data);
-//     },
-//   });
-// }
-
 $(document).ready(function () {
-  $("edit-button").on("click", function (e) {
+  $("#update-btn").on("click", function (e) {
+    e.preventDefault();
+    
+    let productname = $("#pname").val();
+    let productsku = $("#psku").val(); 
+    let productdescription = $("pdescription").val();
+    let price = $("#price").val();
+    let quantity = $("#quantity").val();
+    let productimage = $("#image").val();
     let productid = $(this).attr("data-productid");
-    window.location='http://localhost/fitnationx/';
+
+    editProduct(productname, productsku, productdescription, price, quantity, productimage,productid);
   });
 });
+
+function editProduct(productname, productsku, productdescription, price, quantity, productimage,productid) {
+  $.ajax({
+    url: "http://localhost/fitnationx/adminupdateproduct",
+    type: "POST",
+    data: {
+        productname: productname,
+        productsku: productsku,
+        productdescription: productdescription,
+        price: price,
+        quantity: quantity,
+        productimage: productimage,
+        productid: productid
+    },
+    success: function (data) {
+        alert(data);
+    },
+  });
+}

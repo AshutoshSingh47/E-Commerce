@@ -1,5 +1,3 @@
-<?php
-?>
 <html>
 
 <head>
@@ -7,6 +5,7 @@
     <link rel="stylesheet" href="<?= BASE_URI ?>View/base/header.css">
     <link rel="stylesheet" href="<?= BASE_URI ?>View/base/index.css">
     <link rel="stylesheet" href="<?= BASE_URI ?>View/base/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,38 +19,36 @@
             <li class="items"><a href="<?= BASE_URI ?>admin/logout">Log out</a></li>
         </ul>
     </div>
-    <h1>Sign Up</h1>
-    <form name="registration" method="post" action="<?= BASE_URI ?>admin/adminsignup" id="registration">
-        <div class="row">
-            <label for="fname">First Name :</label>
-            <input type="text" name="fname" id="fname" required><br><br>
-        </div>
-        <div class="row">
-            <label for="lname">Last Name :</label>
-            <input type="text" name="lname" id="lname" required><br><br>
-        </div>
-        <div class="row">
-            <label for="email">Email :</label>
-            <input type="email" name="email" id="email" required><br><br>
-        </div>
-        <div class="row">
-            <label for="password">Password :</label>
-            <input type="password" name="password" id="password" required><br><br>
-        </div>
-        <div class="row">
-            <label for="phoneno">Phone No :</label>
-            <input type="tel" name="phoneno" id="phoneno" required><br><br>
-        </div>
-        <div class="row">
-            <label for="gymname">Gym Name :</label>
-            <input type="text" name="gymname" id="gymname" required><br><br>
-        </div>
-        <div class="row">
-            <label for="address">Address :</label>
-            <textarea name="address" id="address" required></textarea>
-        </div>
-        <button type="submit">Register</button>
-    </form>
+    <h1>Edit Product</h1>
+        <form name="product_edit" id="product_edit" enctype="multipart/form-data">
+            <div class="row">
+                <label for="pname">Product Name :</label>
+                <input type="text" name="pname" id="pname" placeholder="<?=$data["ProductName"]?>"><br><br>
+            </div>
+            <div class="row">
+                <label for="psku">Product SKU :</label>
+                <input type="text" name="psku" id="psku" placeholder="<?=$data["ProductSKU"]?>"><br><br>
+            </div>
+            <div class="row">
+                <label for="pdescription">Product Description :</label>
+                <input type="text" name="pdescription" id="pdescription" placeholder="<?=$data["ProductDescription"]?>"><br><br>
+            </div>
+            <div class="row">
+                <label for="price">Price :</label>
+                <input type="number" name="price" id="price" placeholder="<?=$data["Price"]?>"><br><br>
+            </div>
+           
+            <div class="row">
+                <label for="quantity">Quantity :</label>
+                <input type="number" name="quantity" id="quantity" placeholder="<?=$data["Quantity"]?>"><br><br>
+            </div>
+            <div class="row">
+                <label for="image">Product Image :</label>
+                <input type="file" name="image" id="image" accept="image/*" placeholder="<?=$data["ProductImage"]?>">
+            </div>
+            <button id="update-btn" type="submit" data-productid="<?=$productid?>">Update</button>
+        </form>
+        <script src="../../FitNationX/View/js/admin-edit-product.js"></script>
 </body>
 
 </html>
