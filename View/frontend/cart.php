@@ -1,6 +1,7 @@
 <?php if (!isset($_SESSION["cID"])) {
     header("Location: http://localhost/fitnationx/signin") ?>
-<?php } else { $customerid=$_SESSION["cID"];?>
+<?php } else {
+    $customerid = $_SESSION["cID"]; ?>
     <html>
 
     <head>
@@ -32,10 +33,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $orderTotal=0;
+                        <?php $orderTotal = 0;
                         while ($data = $result->fetch_assoc()) {
                             $pID[$rows] = $data["pID"];
-                            $orderTotal+=$data["TotalPrice"];
+                            $orderTotal += $data["TotalPrice"];
                             $sql = "SELECT ProductImage, ProductName, Price, Quantity FROM adminproducts WHERE pID='$pID[$rows]'";
                             $result2 = $conn->query($sql); ?>
                             <?php while ($data2 = $result2->fetch_assoc()) { ?>
@@ -50,16 +51,19 @@
                                         $<?= $data2["Price"] ?>.00
                                     </td>
                                     <td id="product-quantity">
-                                        <select name="quantity" class="quantity" data-productid="<?=$data["pID"]?>" data-customerid="<?=$customerid?>">
-                                        <option value="<?= $data["Quantity"] ?>"><?= $data["Quantity"] ?></option>
-                                        <?php for ($i = 1; $i <= $data2["Quantity"]; $i++) { ?>   
-                                            <option value="<?= $i ?>"><?= $i ?></option>
-                                        <?php } ?>
+                                        <select name="quantity" class="quantity" data-productid="<?= $data["pID"] ?>"
+                                            data-customerid="<?= $customerid ?>">
+                                            <option value="<?= $data["Quantity"] ?>"><?= $data["Quantity"] ?></option>
+                                            <?php for ($i = 1; $i <= $data2["Quantity"]; $i++) { ?>
+                                                <option value="<?= $i ?>"><?= $i ?></option>
+                                            <?php } ?>
                                         </select>
                                     </td>
                                     <td id="product-total-price">
-                                        <span id="product-price"></span>$<?= $data["TotalPrice"] ?>.00</span>
-                                        <button class="delete-button" type="submit">Delete</button>
+                                        <span id="product-price"></span>
+                                        $<?= $data["TotalPrice"] ?>.00</span>
+                                        <button class="delete-button" type="submit" data-cartid="<?= $data["cartID"] ?>"
+                                            data-customerid=<?= $customerid ?>>Delete</button>
                                     </td>
                                 </tr>
                             <?php }
@@ -70,21 +74,26 @@
                 <button id="update-cart">Update Cart</button>
             </div>
             <div id="cart-total">
-            <span id="cart-total-heading">Summary</span>
-            <hr>
+                <span id="cart-total-heading">Summary</span>
+                <hr>
                 <div id="sub-total">
                     <span>Subtotal</span>
-                    <span id="">$<?=$orderTotal?>.00</span>
+                    <span id="">
+                        $<?= $orderTotal ?>.00
+                    </span>
                 </div>
                 <hr>
                 <div id="order-total">
                     <span id="order-total-title">Order Total</span>
-                    <span id="order-total-value">$<?=$orderTotal?>.00</span>
+                    <span id="order-total-value">
+                        $<?= $orderTotal ?>.00
+                    </span>
                 </div>
                 <button id="proceed-to-checkout-button" title="Proceed To Checkout">Proceed to Checkout</button>
             </div>
         </div>
         <script src="../FitNationX/View/js/cart.js"></script>
+        <script src="../FitNationX/View/js/delete-product-cart.js"></script>
     </body>
 
     </html>
