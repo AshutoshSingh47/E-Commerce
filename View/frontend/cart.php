@@ -58,7 +58,8 @@
                                         </select>
                                     </td>
                                     <td id="product-total-price">
-                                        $<?= $data["TotalPrice"] ?>.00
+                                        <span id="product-price"></span>$<?= $data["TotalPrice"] ?>.00</span>
+                                        <button class="delete-button" type="submit">Delete</button>
                                     </td>
                                 </tr>
                             <?php }
@@ -82,8 +83,6 @@
                 </div>
                 <button id="proceed-to-checkout-button" title="Proceed To Checkout">Proceed to Checkout</button>
             </div>
-            
-            <?php include("../FitNationX/View/frontend/footer.php"); ?>
         </div>
         <script src="../FitNationX/View/js/cart.js"></script>
     </body>

@@ -32,7 +32,7 @@ th{
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 td {
-    padding: 20px 0 135px 10px;
+    padding: 20px 0 220px 10px;
     border-bottom: solid 1px;
     text-align: left;
     border-color: #eee;
@@ -52,14 +52,26 @@ td {
     padding: 0 0 20px 40px;
 }
 #product-image{
-    padding: 0px 0 90px 20px;
+    padding: 0px 0 170px 20px;
 }
 #product-quantity{
-    padding: 20px 0 135px 20px;
+    padding: 10px 0 210px 20px;
 }
-#product-total-price{
-    padding: 20px 0 135px 15px;
+#product-total-price{ 
+  display:flex;
+  flex-direction: column ;
+    padding: 30px 0 20px 15px;
 }
+.delete-button{
+    margin: 170px 0px 0px 0px;
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d7543a;
+    color: #fff;
+    cursor: pointer;
+  }
 select{
     width: 40px;
     height: 25px;
@@ -81,6 +93,8 @@ select{
      pointer;
 }
 #cart-total{
+    position: fixed;
+    right: 0;
     margin: 40px 10px 0 0;
     width: 29%;
     height: fit-content;
@@ -117,7 +131,7 @@ hr{
     background-color: #1979c3;
     padding: 10px;
     width: 70%;
-    height: 55px;
+    height: 60px;
     border: solid 1px;
     border-radius: 3px;
     text-align: center;

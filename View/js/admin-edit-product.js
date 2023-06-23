@@ -44,8 +44,10 @@ function editProduct(
       productid: productid,
     },
     success: function (data) {
+      
       alert(data);
       window.location = "http://localhost/fitnationx/admin/products";
+      
     },
   });
 }
