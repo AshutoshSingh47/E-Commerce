@@ -34,9 +34,11 @@ Linux -> php8.1/8.2, apache2
 
 
 
-![Screenshot 2023-06-19 015709](https://github.com/AshutoshSingh47/E-Commerce/assets/67503435/4ee42073-027a-4897-b438-654949795add)
+![Screenshot 2023-06-23 202034](https://github.com/AshutoshSingh47/E-Commerce/assets/67503435/09e148bb-5441-45e7-a388-8b39e410c2b5)
 
 
+
+![Screenshot 2023-06-23 202050](https://github.com/AshutoshSingh47/E-Commerce/assets/67503435/b0c7edc2-b806-42f7-8f17-9445b6dd4d60)
 
 
 
