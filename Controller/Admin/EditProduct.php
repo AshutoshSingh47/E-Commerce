@@ -11,61 +11,38 @@ if ($productname != null) {
     $sql = "UPDATE adminproducts SET 
 ProductName='$productname'
 WHERE pID='$productid'";
-    if ($conn->query($sql) === TRUE) {
-        echo "Updated successfully";
-    } else {
-        echo "Not Updated successfully";
-    }
+    $conn->query($sql);
 }
 if ($productsku != null) {
     $sql = "UPDATE adminproducts SET 
 ProductSKU='$productsku'
 WHERE pID='$productid'";
-    if ($conn->query($sql) === TRUE) {
-        echo "Updated successfully";
-    } else {
-        echo "Not Updated successfully";
-    }
+    $conn->query($sql);
 }
 if ($productdescription != null) {
     $sql = "UPDATE adminproducts SET 
     ProductDescription='$productdescription'
     WHERE pID='$productid'";
-    if ($conn->query($sql) === TRUE) {
-        echo "Updated successfully";
-    } else {
-        echo "Not Updated successfully";
-    }
+    $conn->query($sql);
 }
 if ($price != null) {
     $sql = "UPDATE adminproducts SET 
 Price='$price'
 WHERE pID='$productid'";
-    if ($conn->query($sql) === TRUE) {
-        echo "Updated successfully";
-    } else {
-        echo "Not Updated successfully";
-    }
+    $conn->query($sql);
 }
 if ($quantity != null) {
     $sql = "UPDATE adminproducts SET 
 Quantity='$quantity'
 WHERE pID='$productid'";
-    if ($conn->query($sql) === TRUE) {
-        echo "Updated successfully";
-    } else {
-        echo "Not Updated successfully";
-    }
+    $conn->query($sql);
 }
 if ($productimage != null) {
     $sql = "UPDATE adminproducts SET 
 ProductImage='$productimage'
 WHERE pID='$productid'";
-    if ($conn->query($sql) === TRUE) {
-        echo "Updated successfully";
-    } else {
-        echo "Not Updated successfully";
-    }
+    $conn->query($sql);
 }
 
+echo "Product Updated successfully";
 ?>

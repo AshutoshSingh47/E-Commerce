@@ -20,35 +20,35 @@
         </ul>
     </div>
     <h1>Edit Product</h1>
-        <form name="product_edit" id="product_edit" enctype="multipart/form-data">
-            <div class="row">
-                <label for="pname">Product Name :</label>
-                <input type="text" name="pname" id="pname" placeholder="<?=$data["ProductName"]?>"><br><br>
-            </div>
-            <div class="row">
-                <label for="psku">Product SKU :</label>
-                <input type="text" name="psku" id="psku" placeholder="<?=$data["ProductSKU"]?>"><br><br>
-            </div>
-            <div class="row">
-                <label for="pdescription">Product Description :</label>
-                <input type="text" name="pdescription" id="pdescription" placeholder="<?=$data["ProductDescription"]?>"><br><br>
-            </div>
-            <div class="row">
-                <label for="price">Price :</label>
-                <input type="number" name="price" id="price" placeholder="<?=$data["Price"]?>"><br><br>
-            </div>
-           
-            <div class="row">
-                <label for="quantity">Quantity :</label>
-                <input type="number" name="quantity" id="quantity" placeholder="<?=$data["Quantity"]?>"><br><br>
-            </div>
-            <div class="row">
-                <label for="image">Product Image :</label>
-                <input type="file" name="image" id="image" accept="image/*" placeholder="<?=$data["ProductImage"]?>">
-            </div>
-            <button id="update-btn" type="submit" data-productid="<?=$productid?>">Update</button>
-        </form>
-        <script src="../../FitNationX/View/js/admin-edit-product.js"></script>
+    <form name="product_edit" id="product_edit" enctype="multipart/form-data">
+        <div class="row">
+            <label for="pname">Product Name :</label>
+            <input type="text" name="pname" id="pname" placeholder="<?= $data["ProductName"] ?>"><br><br>
+        </div>
+        <div class="row">
+            <label for="psku">Product SKU :</label>
+            <input type="text" name="psku" id="psku" placeholder="<?= $data["ProductSKU"] ?>"><br><br>
+        </div>
+        <div class="row">
+            <label for="pdescription">Product Description :</label>
+            <input type="text" name="pdescription" id="pdescription"
+                placeholder="<?= $data["ProductDescription"] ?>"><br><br>
+        </div>
+        <div class="row">
+            <label for="price">Price :</label>
+            <input type="number" name="price" id="price" placeholder="<?= $data["Price"] ?>"><br><br>
+        </div>
+        <div class="row">
+            <label for="quantity">Quantity :</label>
+            <input type="number" name="quantity" id="quantity" placeholder="<?= $data["Quantity"] ?>"><br><br>
+        </div>
+        <div class="row">
+            <label for="image">Product Image :</label>
+            <input type="file" name="image" id="image" accept="image/*" placeholder="<?= $data["ProductImage"] ?>">
+        </div>
+        <button id="update-btn" type="submit" data-productid="<?= $productid ?>">Update</button>
+    </form>
+    <script src="../../FitNationX/View/js/admin-edit-product.js"></script>
 </body>
 
 </html>
