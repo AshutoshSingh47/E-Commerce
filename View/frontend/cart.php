@@ -6,6 +6,7 @@
 
     <head>
         <title>FitNationX - Cart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/base/header.css">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/css/cart.css">
         <link rel="stylesheet" href="<?= BASE_URI ?>View/base/footer.css">
@@ -23,6 +24,10 @@
         </div>
         <div id="cart-container">
             <div id="cart-table">
+                <h1>Shopping Cart</h1>
+                <?php if($rows == 0){?>
+                    <h1>Cart is Empty !!!</h1>
+                <?php } else{?>
                 <table>
                     <thead>
                         <tr>
@@ -91,6 +96,7 @@
                 </div>
                 <button id="proceed-to-checkout-button" title="Proceed To Checkout">Proceed to Checkout</button>
             </div>
+            <?php }?>
         </div>
         <script src="../FitNationX/View/js/cart.js"></script>
         <script src="../FitNationX/View/js/delete-product-cart.js"></script>

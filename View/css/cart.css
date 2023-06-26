@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+body{
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
 #cart-container{
     display: flex;
     flex-direction: row;
@@ -16,6 +19,11 @@
     margin: 20px 0;
     width: 70%;
     height: auto;
+}
+#cart-table h1{
+    font-size: 40px;
+    margin: 50px 50px 60px 50px;
+    font-weight: 300;
 }
 table{
 margin: 20px 0px 0 50px;
@@ -95,7 +103,7 @@ select{
 #cart-total{
     position: fixed;
     right: 0;
-    margin: 40px 10px 0 0;
+    margin: 150px 10px 0 0;
     width: 29%;
     height: fit-content;
     background-color: #f4f4f4;

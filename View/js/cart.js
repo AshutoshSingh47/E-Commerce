@@ -11,6 +11,10 @@ $(document).ready(function () {
         getValue(productid, customerid, quantity);
       });
   }
+
+  $("#proceed-to-checkout-button").on("click",function(){
+    window.location="http://localhost/fitnationx/cart/shippingdetails";
+  })
 });
 
 function getValue(productid, customerid, quantity) {
