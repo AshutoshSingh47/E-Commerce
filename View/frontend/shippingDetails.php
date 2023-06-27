@@ -35,47 +35,47 @@
                         <div id="row3">
                             <div id="row2">
                                 <label id="firstname" for="fname">First Name</label>
-                                <input type="text" name="fname" id="fname">
+                                <input type="text" name="fname" id="fname" placeholder="<?=$data["FirstName"]?>">
                             </div>
                             <div id="row2">
                                 <label id="lastname" for="lname">Last Name</label>
-                                <input type="text" name="lname" id="lname">
+                                <input type="text" name="lname" id="lname" placeholder="<?=$data["LastName"]?>">
                             </div>
                         </div>
                         <div id="row1">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" placeholder="<?=$data["Email"]?>">
                         </div>
                         <div id="row1">
                             <label for="phoneno">Phone No</label>
-                            <input type="tel" name="phoneno" id="phoneno">
+                            <input type="tel" name="phoneno" id="phoneno" placeholder="<?=$data["PhoneNo"]?>">
                         </div>
 
                         <div id="row1">
                             <label for="houseno">Flat/House No.</label>
-                            <input type="text" id="houseno" name="houseno">
+                            <input type="text" id="houseno" name="houseno" required>
                         </div>
                         <div class="row">
                             <label for="streetname">Street Name</label>
-                            <textarea name="streetname" id="streetname"></textarea>
+                            <textarea name="streetname" id="streetname" required></textarea>
                         </div>
                         <div class="row">
                             <label for="city">City</label>
-                            <input type="text" name="city" id="city">
+                            <input type="text" name="city" id="city" required>
                         </div>
                         <div class="row">
                             <label for="state">State/Province</label>
-                            <input type="text" name="state" id=state>
+                            <input type="text" name="state" id=state required>
                         </div>
                         <div class="row">
                             <label for="country">Country</label>
-                            <input type="text" name="country" id=country>
+                            <input type="text" name="country" id=country required>
                         </div>
                         <div class="row">
                             <label for="pincode">Pincode</label>
-                            <input type="text" name="pincode" id=pincode>
+                            <input type="text" name="pincode" id=pincode required>
                         </div>
-                        <button type="submit">Submit</button>
+                        <button id="submit" type="submit">Submit</button>
                     </form>
                 </div>
             </div>

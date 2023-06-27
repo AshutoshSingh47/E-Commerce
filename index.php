@@ -70,6 +70,9 @@ if ($request == "/admin") {
 }else if ($request == "/cartdeleteproduct") {
     include("../fitnationx/Controller/Frontend/DeleteProduct.php");
 }else if ($request == "/cart/shippingdetails") {
+    include("../fitnationx/Controller/Frontend/PlaceholderCustomerInfo.php");
     include("../fitnationx/View/frontend/shippingDetails.php");
+}else if ($request == "/cart/shippingdetails/data") {
+    include("../fitnationx/Controller/Frontend/ShippingDetails.php");
 }
 ?>
