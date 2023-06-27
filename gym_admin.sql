@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2023 at 08:26 AM
+-- Generation Time: Jun 27, 2023 at 03:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -88,7 +88,7 @@ INSERT INTO `adminproducts` (`pID`, `aID`, `ProductName`, `ProductSKU`, `Product
 (14, 2, 'treadmill', '#td101', 'treadmill', 200, 10, 'tread_mill.jpg'),
 (16, 2, 'ab fitness crunch', '#cp107', 'ab fitness crunch', 100, 10, 'ab_fitness_crunch.jpeg'),
 (17, 2, 'benchpress', '#bp103', 'benchpress', 299, 10, 'benchpress.jpg'),
-(20, 2, 'yoga ball', '#yb127', 'yoga ball', 26, 20, 'yoga_ball.jpg');
+(24, 2, 'yoga ball', '#yb120', 'yoga ball', 20, 20, 'yoga_ball.jpg');
 
 -- --------------------------------------------------------
 
@@ -109,16 +109,11 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`cartID`, `cID`, `pID`, `Quantity`, `TotalPrice`) VALUES
-(1, 3, 3, 2, 60),
-(3, 3, 2, 5, 100),
-(6, 3, 7, 2, 30),
-(7, 3, 12, 4, 200),
-(8, 3, 4, 2, 398),
 (9, 6, 8, 2, 318),
-(10, 3, 10, 3, 387),
-(11, 3, 16, 3, 300),
-(13, 3, 6, 8, 400),
-(14, 3, 9, 3, 300);
+(22, 3, 5, 1, 239),
+(23, 3, 10, 1, 129),
+(24, 3, 12, 1, 50),
+(25, 3, 4, 1, 199);
 
 -- --------------------------------------------------------
 
@@ -146,6 +141,27 @@ INSERT INTO `customer` (`cID`, `FirstName`, `LastName`, `PhoneNo`, `Email`, `Pas
 (4, 'Vernoica', 'Costella', '2637434837', 'veronicacostella@gmail.com', 'veronica'),
 (6, 'Richard', 'Park', '7463764437', 'richardpark@gmail.com', 'park'),
 (7, 'Aditya', 'Dwivedi', '9474464445', 'adityadwivedi288@gmail.com', 'aditya');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shippingdetails`
+--
+
+CREATE TABLE `shippingdetails` (
+  `addressID` int(10) UNSIGNED NOT NULL,
+  `cID` int(10) UNSIGNED NOT NULL,
+  `FirstName` varchar(30) NOT NULL,
+  `LastName` varchar(30) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `PhoneNo` varchar(50) NOT NULL,
+  `HouseNo` varchar(20) NOT NULL,
+  `StreetName` varchar(200) NOT NULL,
+  `City` varchar(50) NOT NULL,
+  `State` varchar(50) NOT NULL,
+  `Country` varchar(30) NOT NULL,
+  `PinCode` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -179,6 +195,13 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`cID`);
 
 --
+-- Indexes for table `shippingdetails`
+--
+ALTER TABLE `shippingdetails`
+  ADD PRIMARY KEY (`addressID`),
+  ADD KEY `cID` (`cID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -192,19 +215,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `adminproducts`
 --
 ALTER TABLE `adminproducts`
-  MODIFY `pID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `pID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cartID` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `cartID` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
   MODIFY `cID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `shippingdetails`
+--
+ALTER TABLE `shippingdetails`
+  MODIFY `addressID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
@@ -222,6 +251,12 @@ ALTER TABLE `adminproducts`
 ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`cID`) REFERENCES `customer` (`cID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`pID`) REFERENCES `adminproducts` (`pID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `shippingdetails`
+--
+ALTER TABLE `shippingdetails`
+  ADD CONSTRAINT `shippingdetails_ibfk_1` FOREIGN KEY (`cID`) REFERENCES `customer` (`cID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
