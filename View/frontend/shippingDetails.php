@@ -28,36 +28,55 @@
                 <div id="message"></div>
                 <button id="btn-add-new-address" type="submit">+ New Address</button>
                 <div id="modal">
-                    
-                        <form id="address">
+                    <form id="address">
                         <span id="close">&times;</span>
-                            <div id="row1">
-                                <label for="houseno">Flat/House No.</label>
-                                <input type="text" id="houseno" name="houseno">
+                        <h1>Ship To</h1>
+
+                        <div id="row3">
+                            <div id="row2">
+                                <label id="firstname" for="fname">First Name</label>
+                                <input type="text" name="fname" id="fname">
                             </div>
-                            <div class="row">
-                                <label for="streetname">Street Name</label>
-                                <textarea name="streetname" id="streetname"></textarea>
+                            <div id="row2">
+                                <label id="lastname" for="lname">Last Name</label>
+                                <input type="text" name="lname" id="lname">
                             </div>
-                            <div class="row">
-                                <label for="city">City</label>
-                                <input type="text" name="city" id="city">
-                            </div>
-                            <div class="row">
-                                <label for="state">State/Province</label>
-                                <input type="text" name="state" id=state>
-                            </div>
-                            <div class="row">
-                                <label for="country">Country</label>
-                                <input type="text" name="country" id=country>
-                            </div>
-                            <div class="row">
-                                <label for="pincode">Pincode</label>
-                                <input type="text" name="pincode" id=pincode>
-                            </div>
-                            <button type="submit">Submit</button>
-                        </form>
-                    
+                        </div>
+                        <div id="row1">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div id="row1">
+                            <label for="phoneno">Phone No</label>
+                            <input type="tel" name="phoneno" id="phoneno">
+                        </div>
+
+                        <div id="row1">
+                            <label for="houseno">Flat/House No.</label>
+                            <input type="text" id="houseno" name="houseno">
+                        </div>
+                        <div class="row">
+                            <label for="streetname">Street Name</label>
+                            <textarea name="streetname" id="streetname"></textarea>
+                        </div>
+                        <div class="row">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                        <div class="row">
+                            <label for="state">State/Province</label>
+                            <input type="text" name="state" id=state>
+                        </div>
+                        <div class="row">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id=country>
+                        </div>
+                        <div class="row">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" name="pincode" id=pincode>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
             <script src="../../fitnationx/View/js/shipping-detail.js"></script>
