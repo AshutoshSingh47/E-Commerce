@@ -20,7 +20,7 @@ body {
 }
 #shipping-address h1 {
   font-size: 40px;
-  margin: 50px 50px 30px 50px;
+  margin: 50px 50px 20px 50px;
   font-weight: 300;
 }
 #btn-add-new-address {
@@ -40,7 +40,7 @@ body {
 #message {
   position: relative;
   top: 0;
-  width: 100%;
+  width: 90%;
   right: 0px;
   left: 0;
   margin: 10px 0 20px 50px;
@@ -165,4 +165,10 @@ button:hover {
 #lastname {
   text-align: left;
   margin: 20px 0 20px 20px;
+}
+#customer-shipping-addresses{
+  border-top: solid 1px #ccc;
+  margin: 0 0 0 50px;
+  width: 90%;
+  height: auto;
 }

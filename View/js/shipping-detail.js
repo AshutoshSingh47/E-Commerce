@@ -78,7 +78,7 @@ function shippingDetails(
          message_id.style.backgroundColor="#dff0d8";
          message_id.style.color="#3c763d";
          message_id.innerHTML =
-          "Address Added Sucessfully";
+          "Address added sucessfully";
           setTimeout(() => {
              message_id.style.display="none";
         }, 2000);
@@ -87,7 +87,7 @@ function shippingDetails(
          message_id.style.backgroundColor="#f2dede";
          message_id.style.color="#a94442";
          message_id.innerHTML =
-          "Address Not Added Sucessfully";
+          "Address not added sucessfully";
           setTimeout(() => {
              message_id.style.display="none";
         }, 2000);

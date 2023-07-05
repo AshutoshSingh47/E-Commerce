@@ -26,6 +26,12 @@
             <div id="shipping-address">
                 <h1>Shipping Address</h1>
                 <div id="message"></div>
+                <div id="customer-shipping-addresses">
+                    <?php if($rows==0){
+                        
+                    } ?>
+                    <div id="address"></div>
+                </div>
                 <button id="btn-add-new-address" type="submit">+ New Address</button>
                 <div id="modal">
                     <form id="address">
@@ -53,27 +59,27 @@
 
                         <div id="row1">
                             <label for="houseno">Flat/House No.</label>
-                            <input type="text" id="houseno" name="houseno" required>
+                            <input type="text" id="houseno" name="houseno">
                         </div>
                         <div class="row">
                             <label for="streetname">Street Name</label>
-                            <textarea name="streetname" id="streetname" required></textarea>
+                            <textarea name="streetname" id="streetname"></textarea>
                         </div>
                         <div class="row">
                             <label for="city">City</label>
-                            <input type="text" name="city" id="city" required>
+                            <input type="text" name="city" id="city">
                         </div>
                         <div class="row">
                             <label for="state">State/Province</label>
-                            <input type="text" name="state" id=state required>
+                            <input type="text" name="state" id=state>
                         </div>
                         <div class="row">
                             <label for="country">Country</label>
-                            <input type="text" name="country" id=country required>
+                            <input type="text" name="country" id=country>
                         </div>
                         <div class="row">
                             <label for="pincode">Pincode</label>
-                            <input type="text" name="pincode" id=pincode required>
+                            <input type="text" name="pincode" id=pincode>
                         </div>
                         <button id="submit" type="submit">Submit</button>
                     </form>

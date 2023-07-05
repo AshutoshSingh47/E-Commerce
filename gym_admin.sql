@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2023 at 03:53 PM
+-- Generation Time: Jul 05, 2023 at 12:59 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -164,6 +164,15 @@ CREATE TABLE `shippingdetails` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `shippingdetails`
+--
+
+INSERT INTO `shippingdetails` (`addressID`, `cID`, `FirstName`, `LastName`, `Email`, `PhoneNo`, `HouseNo`, `StreetName`, `City`, `State`, `Country`, `PinCode`) VALUES
+(9, 3, '', '', '', '', 'P-701', 'Antriksh Golf View -1, Sector 78', 'Noida', 'Uttar Pradesh', 'India', '201305'),
+(10, 3, 'John', 'Doe', 'doejhon@gmail.com', '9787484744', 'P-701', 'HNO. 215B, Daudpur, Near Aryan Hospital', 'Gorakhpur', 'UTTAR PRADESH', 'India', '273010'),
+(11, 3, 'Arvind', 'Singh', 'arvind@gmail.com', '8303594560', 'P-701', 'HNO. 215B, Daudpur, Near Aryan Hospital', 'Gorakhpur', 'UTTAR PRADESH', 'India', '273010');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -233,7 +242,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `shippingdetails`
 --
 ALTER TABLE `shippingdetails`
-  MODIFY `addressID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `addressID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables

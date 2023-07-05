@@ -12,12 +12,25 @@ $state = $_POST["state"];
 $country = $_POST["country"];
 $pincode = $_POST["pincode"];
 
+if ($fname == null) {
+    $fname = $data["FirstName"];
+}
+if ($lname == null) {
+    $lname = $data["LastName"];
+}
+if ($email == null) {
+    $email = $data["Email"];
+}
+if ($phoneno == null) {
+    $phoneno = $data["PhoneNo"];
+}
+
 $sql = "INSERT INTO shippingdetails(cID, FirstName, LastName, Email, PhoneNo, HouseNo, StreetName, City, State, Country, PinCode) 
 VALUES('$cID', '$fname', '$lname', '$email', '$phoneno', '$houseno', '$streetname', '$city', '$state', '$country', '$pincode')";
 
-if($conn->query($sql) === TRUE){
+if ($conn->query($sql) === TRUE) {
     echo "Yes";
-}else{
+} else {
     echo "No";
 }
 ?>
