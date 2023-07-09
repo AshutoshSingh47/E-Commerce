@@ -28,7 +28,9 @@
   color: white;
 }
 .items a:hover {
+  text-decoration: none;
   color: black;
+  
 }
 .logo {
   height: 60px;

@@ -27,10 +27,24 @@
                 <h1>Shipping Address</h1>
                 <div id="message"></div>
                 <div id="customer-shipping-addresses">
-                    <?php if($rows==0){
-                        
+                    <?php if ($rows == 0) { ?>
+                        <h1>No Address Found...</h1>
+                    <?php } else { ?>
+
+
+                        <?php while ($rows != 0) { ?>
+                            <div id="addresses">
+                                <?php while ($data = $result->fetch_assoc()) { ?>
+                                    <p><?=$data["FirstName"]?> <?=$data["LastName"]?></p>
+                                    <p><?=$data["HouseNo"]?> <?=$data["StreetName"]?>,</p>
+                                    <p><?=$data["City"]?>, <?=$data["State"]?>, <?=$data["Country"]?>, <?=$data["PinCode"]?></p>
+                                    <p id="phoneno-display"><?=$data["PhoneNo"]?></p>
+                                <?php break;} ?>
+                            </div>
+                            <?php $rows--;
+                        }
                     } ?>
-                    <div id="address"></div>
+
                 </div>
                 <button id="btn-add-new-address" type="submit">+ New Address</button>
                 <div id="modal">
@@ -41,20 +55,20 @@
                         <div id="row3">
                             <div id="row2">
                                 <label id="firstname" for="fname">First Name</label>
-                                <input type="text" name="fname" id="fname" placeholder="<?=$data["FirstName"]?>">
+                                <input type="text" name="fname" id="fname" placeholder="<?= $data["FirstName"] ?>">
                             </div>
                             <div id="row2">
                                 <label id="lastname" for="lname">Last Name</label>
-                                <input type="text" name="lname" id="lname" placeholder="<?=$data["LastName"]?>">
+                                <input type="text" name="lname" id="lname" placeholder="<?= $data["LastName"] ?>">
                             </div>
                         </div>
                         <div id="row1">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="<?=$data["Email"]?>">
+                            <input type="email" name="email" id="email" placeholder="<?= $data["Email"] ?>">
                         </div>
                         <div id="row1">
                             <label for="phoneno">Phone No</label>
-                            <input type="tel" name="phoneno" id="phoneno" placeholder="<?=$data["PhoneNo"]?>">
+                            <input type="tel" name="phoneno" id="phoneno" placeholder="<?= $data["PhoneNo"] ?>">
                         </div>
 
                         <div id="row1">

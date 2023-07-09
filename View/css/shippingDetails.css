@@ -167,8 +167,29 @@ button:hover {
   margin: 20px 0 20px 20px;
 }
 #customer-shipping-addresses{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border-top: solid 1px #ccc;
   margin: 0 0 0 50px;
   width: 90%;
   height: auto;
+}
+
+#addresses{
+  margin: 20px 10px 0 0px;
+  padding: 10px 20px 20px 20px;
+  height: auto;
+  width: 31%;
+}
+  
+
+#addresses:hover{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+  
+#phoneno-display{
+  margin: 50px 0 0 0;
+  color: #006bb4;
 }
